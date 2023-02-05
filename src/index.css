@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #2f4b4f;
+  background-image: url(./assets/bg.svg);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,13 +16,15 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-  background-color: #1a1a1a;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  border: solid 1px #fff;
+  /* background-color: #1a1a1a; */
 }
 
 a:hover {
-  color: #535bf2;
+  border-color: #646cff;
 }
 
 body {

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 
+
 function App() {
   const [quotes, setQutes] = useState('');
 
@@ -18,9 +19,9 @@ function App() {
   },[]);
 
   return (
-    <div className={App} id="quote-box">
+    <div className={App} id="quote-box" >
       <div id='text'>
-        <p>{quotes.content}</p>
+        <p>{`"${quotes.content}"`}</p>
       </div>
       <div id='author'>
        <p>{quotes.author}</p>
@@ -29,7 +30,11 @@ function App() {
         <button onClick={getQuote} id='new-quote' className='btn'>
          Get Quote
         </button>
-        <a href='' id='tweet-quote' className='btn'>
+        <a 
+        href={`https://twitter.com/intent/tweet?text=${quotes.content} -- ${quotes.author}`} 
+        target="_blank" id='tweet-quote' 
+        className='btn'
+        rel="noopener noreferrer">
           Tweet
         </a>
       </div>
